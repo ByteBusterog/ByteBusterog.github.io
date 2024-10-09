@@ -6,26 +6,35 @@ export class NavTabFixed extends HTMLElement {
   this.classList.add("md-tab", "fixed")
 
   this.innerHTML = /* HTML */`
-   <a ${resaltaSiEstasEn(["/index.html", "", "/"])} href="index.html">
-    <span class="material-symbols-outlined">home</span>
-    Inicio
-   </a>
+   <a id="navtabfixed" ${resaltaSiEstasEn(["/index.html", "", "/"])}
+  href="index.html">
+ <span class="material-symbols-outlined">home</span>
+ Inicio
+</a>
 
-   <a ${resaltaSiEstasEn(["/navtab.html"])} href="navtab.html">
-    <span class="material-symbols-outlined">swipe_left</span>
-    Pestañas scrollable
-   </a>
+<a id="navtabfixed" ${resaltaSiEstasEn(["/geolocalizacion.html"])}
+  href="geolocalizacion.html">
+ <span class="material-symbols-outlined">map</span>
+ GPS
+</a>
 
-   <a id="navtabfixed" ${resaltaSiEstasEn(["/navTabFixed.html"])}
-     href="navTabFixed.html">
-    <span class="material-symbols-outlined">tabs</span>
-    Pestañas fijas
-   </a>
+<a id="navtabfixed" ${resaltaSiEstasEn(["/archivos.html"])}
+  href="archivos.html">
+ <span class="material-symbols-outlined">archive</span>
+ Archivos    
+</a>
 
-   <a ${resaltaSiEstasEn(["/navbar.html"])} href="navbar.html">
-    <span class="material-symbols-outlined">bottom_navigation</span>
-    Barra de navegación
-   </a>`
+<a id="navtabfixed" ${resaltaSiEstasEn(["/camara.html"])}
+  href="camara.html">
+ <span class="material-symbols-outlined">camera</span>
+ Camara
+</a>
+
+<a id="navtabfixed" ${resaltaSiEstasEn(["/ayuda.html"])}
+  href="ayuda.html">
+ <span class="material-symbols-outlined">help</span>
+ Ayuda
+</a>`
  }
 
 }
