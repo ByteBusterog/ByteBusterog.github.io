@@ -4,7 +4,7 @@
 <head>
 
  <meta charset="UTF-8">
- <title>Ayuda - Byte Buster</title>
+ <title>Ayuda</title>
 
  <script src="js/registraServiceWorker.js"></script>
 
@@ -16,22 +16,25 @@
 
  <script type="module" src="js/configura.js"></script>
  <link rel="stylesheet" href="css/estilos.css">
- <link rel="stylesheet" href="css/transicion_completa.css">
+ <link rel="stylesheet" href="css/transicion_pestanas.css">
+ <link rel="expect" blocking="render" href="#navtabfixed">
 
 </head>
 
 <body>
 
- <md-top-app-bar>
+ <md-top-app-bar adicional="tab" headline="headline">
 
   <h1>Ayuda</h1>
 
-  <button is="md-menu-button" slot="navigation"></button>
-
  </md-top-app-bar>
 
- <main>
+ <h1 id="headline">Ayuda</h1>
 
+ <nav-tab-fixed id="tab"></nav-tab-fixed>
+
+ <main>
+ 
   <ul class="md-list">
    <li class="md-two-line">
     <span class="headline">
@@ -82,7 +85,7 @@
      <a target="_blank" rel="license noreferrer"
        href="http://creativecommons.org/licenses/by/4.0/">
       Licencia Creative Commons Atribución 4.0 Internacional</a></span>
-   </li> 
+   </li>
    <li>
     <a class="md-three-line" target="_blank" rel=”noreferrer”
       href="https://fonts.google.com/icons">
@@ -95,10 +98,8 @@
     </a>
    </li>
   </ul>
-
+ 
  </main>
-
- <nav-drw></nav-drw>
 
 </body>
 
