@@ -28,6 +28,10 @@ const CACHE = "pwamd"
  */
 const ARCHIVOS = [
  "favicon.ico",
+ "geolocalizacion.html",
+ "archivos.html",
+ "camara.html",
+ "ayuda.html",
  "index.html",
  "site.webmanifest",
  "css/estilos.css",
