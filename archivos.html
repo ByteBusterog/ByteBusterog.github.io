@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Archivos y Cámara</title>
+    <title>Archivos - Geolocalización</title>
     <style>
         html {
             color-scheme: light dark;
@@ -22,7 +22,7 @@
     <script type="module" src="js/configura.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/transicion_pestanas.css">
-    <link rel="expect" blocking="render" href="#navtabfixed">
+    <link rel="expect" blocking="render" href="js/nav-tab-fixed.js">
 
 </head>
 
@@ -43,22 +43,28 @@
             Esta página se usa para archivos.
         </p>
         <p>
-            <label>
-                Foto de Móvil
-                <input type="file" accept="image/*" capture="camera">
+            <label class="md-filled-text-field" for="fotoMovil">
+                <span>Foto de Móvil *</span>
+                <input type="file" id="fotoMovil" class="md-input" accept="image/*" capture="camera">
+                <small>Obligatorio</small>
             </label>
+            
         </p>
         <p>
-            <label>
-                Video de Móvil
-                <input type="file" accept="video/*" capture="">
+            <label class="md-filled-text-field" for="videoMovil">
+                <span>Video de Móvil *</span>
+                <input type="file" id="videoMovil" class="md-input" accept="video/*" capture="">
+                <small>Obligatorio</small>
             </label>
+            
         </p>
         <p>
-            <label>
-                Archivo
-                <input type="file">
+            <label class="md-filled-text-field" for="archivoInput">
+                <span>Archivo *</span>
+                <input type="file" id="archivoInput" class="md-input">
+                <small>Obligatorio</small>
             </label>
+            
         </p>
     </main>
 

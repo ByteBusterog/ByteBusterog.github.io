@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.00"
+const VERSION = "2.00"
 
 /**
  * Nombre de la carpeta de caché.
@@ -52,7 +52,6 @@ const ARCHIVOS = [
  "js/configura.js",
  "js/nav-bar.js",
  "js/nav-drw.js",
- "js/chistes.js",
  "js/nav-tab-fixed.js",
  "js/nav-tab-scrollable.js",
  "js/registraServiceWorker.js",

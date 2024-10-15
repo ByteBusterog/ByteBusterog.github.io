@@ -4,10 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Chistes Byte Buster</title>
-    <script src="js/registraServiceWorker.js"></script>
-    <script src="js/chistes.js"></script>
-
+    <title>Index - Geolocalización</title>
 
     <script src="js/registraServiceWorker.js"></script>
 
@@ -20,7 +17,7 @@
     <script type="module" src="js/configura.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/transicion_pestanas.css">
-    <link rel="expect" blocking="render" href="#navtabfixed">
+    <link rel="expect" blocking="render" href="js/nav-tab-fixed.js">
 
 </head>
 
@@ -28,40 +25,22 @@
 
     <md-top-app-bar adicional="tab" headline="headline">
 
-        <h1>Chistes</h1>
 
     </md-top-app-bar>
 
-    <h1 id="headline">Chistes con ByteBusters</h1>
+    <h1 id="headline">Inicio</h1>
 
     <nav-tab-fixed id="tab"></nav-tab-fixed>
 
     <form>
 
         <main>
-            <p>
-                <span id="etiquetaGrupo" class="md-filled-text-field" accesskey="G">
-                    <md-select-menu name="grupo" required value="" aria-labelledby="etiquetaGrupo"
-                        options="opcionesDeGrupo"></md-select-menu>
-                    <span>Integrante *</span>
-                    <small>Obligatorio</small>
-                </span>
-            </p>
+            <h1>Pagina de Geolocalización Byte Buster</h1>
 
-            <p>
-                <button class="md-filled-button" style="width: 100%;">Enviar</button>
-            </p>
-            <p id="chiste-display"></p> <!-- Párrafo para mostrar el chiste -->
+           
         </main>
 
-        <md-options-menu id="opcionesDeGrupo" aria-label="Opciones de grupo">
-            <span data-value="" title="Selecciona opción"></span>
-            <span data-value="1">Joseph</span>
-            <span data-value="2">Enoc</span>
-            <span data-value="3">Dana</span>
-            <span data-value="4">German</span>
-            <span data-value="5">Palacios</span>
-        </md-options-menu>
+
 
         <nav-drw></nav-drw>
     </form>
