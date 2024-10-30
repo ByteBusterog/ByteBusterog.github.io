@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Index - Geolocalización</title>
+
+    <script src="js/registraServiceWorker.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#fffbfe">
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="ungap/custom-elements.js"></script>
+
+    <script type="module" src="js/configura.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/transicion_pestanas.css">
+    <link rel="expect" blocking="render" href="js/nav-tab-fixed.js">
+
+</head>
+
+<body>
+
+    <md-top-app-bar adicional="tab" headline="headline">
+
+
+    </md-top-app-bar>
+
+    <h1 id="headline">Inicio</h1>
+
+    <nav-tab-fixed id="tab"></nav-tab-fixed>    
+
+    <form id="chisteForm">
+        <p>
+            <span id="etiquetaGrupo" class="md-filled-text-field" accesskey="G">
+                <select id="integrante" name="integrante" required>
+                    <option value="">Selecciona un integrante</option>
+                    <option value="integrante1">Joseph</option>
+                    <option value="integrante2">Enoc</option>
+                    <option value="integrante3">Danna</option>
+                    <option value="integrante4">German</option>
+                    <option value="integrante5">Palacios</option>
+                </select>
+                <span>Grupo *</span>
+                <small>Obligatorio</small>
+            </span>
+        </p>
+        <button button class="md-filled-button" style="width: 100%;" type="submit">Mostrar Chiste</button>
+    </form>
+
+    <div id="resultado"></div> <!-- Contenedor para mostrar el chiste -->
+
+    <nav-drw></nav-drw>
+
+    <script>
+        // Chistes por integrante
+        const chistes = {
+            'integrante1': '¿Por qué los pájaros no usan Facebook? ¡Porque ya tienen Twitter!',
+            'integrante2': '¿Qué le dice una iguana a su hermana gemela? ¡Iguanita!',
+            'integrante3': '¿Por qué los esqueletos no pelean entre ellos? Porque no tienen agallas!',
+            'integrante4': '¿Cómo maldice un pollito a otro? ¡¡¡Que te pico!!!',
+            'integrante5': '¿Qué le dice un jardinero a otro? ¡Disfrutemos mientras podamos!'
+        };
+
+        // Manejar el envío del formulario
+        document.getElementById('chisteForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que se recargue la página
+
+            const integrante = document.getElementById('integrante').value; // Obtener el valor seleccionado
+            const resultadoDiv = document.getElementById('resultado'); // Contenedor para el resultado
+
+            // Verificar si el integrante tiene un chiste
+            if (chistes[integrante]) {
+                resultadoDiv.innerHTML = `<h2>Chiste:</h2><p>${chistes[integrante]}</p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p>No hay chiste disponible para este integrante.</p>`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
